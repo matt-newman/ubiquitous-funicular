@@ -1,21 +1,50 @@
 # Preqin Technical Interview
 
-Hello! If you are reading this, then we're likely in the process of chatting with you about a technical role at Preqin. If so, congratulations!
+Hello! If you are reading this, then we're in the process of chatting with you about a technical role at Preqin. Congratulations!
 
-To move forward, we'd like to know a bit about how you work. We'd like you to demonstrate your skills and abilities with these coding tasks. You'll then have the opportunity to showcase your work to some of our engineering team, discuss your solution, explain what you might do differently with more time, and answer any questions.
+To move forward, we'd like to know a bit about how you work. We'd like you to demonstrate your skills and abilities. Below is a user story that reflects with work you will be doing at Preqin day to day. We would like you to deliver an e2e functional MVP of the feature, try to limit yourself to 2-3hours.
+
+You'll then have the opportunity to showcase your work to some of our engineering team, discuss your solution, explain what you might do differently with more time, and answer any questions.
 
 This exercise is not graded or scored; it is designed to give us a sample of your thought processes as an engineer.
 
-## Guidelines for the take-home test:
+## The User Story
 
-- **Flexible Timing:** We're a global team spread across multiple time zones, and we hire candidates from diverse locations. This asynchronous exercise allows you to showcase your skills at a time and place that works for you.
+The aim is to fulfill the following user story:
 
-- **Paced Work:** Each task is designed to take around an hour. While we suggest limiting your time investment, you are free to spend as much time as you need to best represent your skills.
+```
+As a Preqin user,
+I want to see a list of investors, their details and the total of their commitments.
+When I click on an investor,
+I want to see a breakdown of their commitments.
+When I click on an Asset Class
+I want to see relecant commitments.
+```
 
-- **Reflective of Our Work**: As a remote team, much of our work involves self-directed problem-solving, followed by iterative review and refinement. This exercise mirrors that workflow.
+Sample data is provided in `data.csv`. 
 
-- **Reduced Anxiety**: This format eliminates the stress of pair programming with someone you just met.
+How you visualise the data is up to you, but we include some wireframes just in case you want some guidance: 
+![Investors Listing](./wireframe-investors.png) ![Commitments Breakdown](./wireframe-investor-commitments.png)
 
-- **Preferred Tools**: You can use the tools, languages, and frameworks that make you most productive.
+Note: Assume a sole currency of GBP, and ignore any authentication needs.
 
-- **Show Your Craft**: Demonstrate your process through commits, unit tests, running code, and deployment considerations.
+
+## Technical Requirements
+
+The solution is completely open but some technical specifications need to be met:
+
+1. You must use a real database and model the entities accordingly. We recommend `SQLite` so that you can include the database with your code.
+
+2. Data must be aggregated/calculated on an API service written in Python or C#
+
+3. Your API must be consumed by a web application using React/Typescript
+
+Note, these are the technologies we use day to day.
+
+
+## Submitting your solution
+
+Please submit your solution by sharing a public github or bitbucket with your code with the recruiter.
+We ask you do not fork or PR against the Preqin repository.
+
+Thank you and good luck!
