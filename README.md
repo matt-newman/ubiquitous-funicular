@@ -18,7 +18,7 @@ I want to see a list of investors, their details and the total of their commitme
 When I click on an investor,
 I want to see a breakdown of their commitments.
 When I click on an Asset Class
-I want to see relecant commitments.
+I want to see relevant commitments.
 ```
 
 Sample data is provided in `data.csv`. 
