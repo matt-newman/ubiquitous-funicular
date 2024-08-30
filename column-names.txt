@@ -1,0 +1,19 @@
+Tables:
+
+
+Investors:
+id - pk autoinc
+Name
+Type
+Country
+Date Added
+Last Updated
+
+
+
+Commitments:
+id - pk autoinc
+investorId - fk Investor.id
+Asset Class
+Amount
+Currency
