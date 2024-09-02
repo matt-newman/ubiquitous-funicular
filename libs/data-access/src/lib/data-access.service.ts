@@ -26,4 +26,3 @@ export class DataAccessService {
     return prisma.$queryRawTyped(getAssets());
   }
 }
-

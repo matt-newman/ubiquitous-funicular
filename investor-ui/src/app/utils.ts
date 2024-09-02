@@ -43,3 +43,13 @@ export function useFetch(url: string): any {
         error
     };
 };
+
+export function displayMoneyAmount(amount: number) {
+    let options = {
+        notation: 'compact',
+    } as Intl.NumberFormatOptions;
+
+    let formatter = new Intl.NumberFormat("en-GB", options);
+
+    return formatter.format(amount);
+}
