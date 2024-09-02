@@ -1,3 +1,6 @@
+
+
+## database setup:
 brew install sqlite
 
 quick look at data, assuming the following setup:
@@ -62,4 +65,14 @@ returns:
 
 a similar check for date added and last updated, shows there's no difference in those date-times, so they're a little pointless, they could live on either table
 
+## Application:
+with all data done, thinking about BE & FE setup, if this was the full extent of the app, I'd use NextJS and everything could be done in a small monolith, but the tech requirements suggest a BE service, and MFEs, so I'll do that in a monorepo instead, probably using nx, nest, vite ... or course in a larger setup, I'd keep the BE & FE projects seperate, but there's not gain from doing that
+
+`npx nx@latest init`
+`npm install -D @nrwl/nest`
+`nx generate @nrwl/nest:application api`
+
+Quick test:
+`nx serve api`
+go to http://localhost:3000/api/ -> should get "hello world"
 

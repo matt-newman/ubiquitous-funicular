@@ -1,0 +1,10 @@
+{
+  "name": "investor",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "investor/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project investor --web",
+  "targets": {
+  }
+}
