@@ -76,3 +76,9 @@ Quick test:
 `nx serve api`
 go to http://localhost:3000/api/ -> should get "hello world"
 
+To run DB setup:
+`npx prisma migrate dev`
+
+http://localhost:3000/api/investors should list investors
+http://localhost:3000/api/commitments should list commitments
+

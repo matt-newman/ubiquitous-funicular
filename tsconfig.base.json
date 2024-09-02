@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "investor": ["investor/src/index.ts"],
-      "prisma": ["prisma/src/index.ts"]
+      "data-access": ["libs/data-access/src/index.ts"],
+      "prisma-schema": ["libs/prisma-schema/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

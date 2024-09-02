@@ -41,6 +41,6 @@
     "tslib": "^2.3.0"
   },
   "prisma": {
-    "seed": "bash prisma/seed.sh"
+    "seed": "bash ./libs/prisma-schema/seed.sh"
   }
 }
