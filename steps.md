@@ -81,4 +81,9 @@ To run DB setup:
 
 http://localhost:3000/api/investors should list investors
 http://localhost:3000/api/commitments should list commitments
+http://localhost:3000/api/investors-data
+http://localhost:3000/api/assets
+http://localhost:3000/api/investor/1
 
+Created a simple frontend app
+`nx g @nx/react:app investor-ui --bundler=vite`

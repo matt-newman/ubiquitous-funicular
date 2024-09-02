@@ -1,0 +1,9 @@
+{
+  "name": "investor-ui",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "investor-ui/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project investor-ui --web",
+  "targets": {}
+}

@@ -27,7 +27,7 @@ SELECT asset_class, SUM(amount) as total_amount FROM Commitment GROUP BY asset_c
 -- "Private Equity",2551000000
 -- "Real Estate",2325000000
 
-SELECT Investor.id, investor_name, investor_type, date_added, asset_class, investor_country, SUM(amount) FROM Investor
+SELECT Investor.id, investor_name, investor_type, date_added, asset_class, investor_country, SUM(amount) as total_amount FROM Investor
     INNER JOIN Commitment on Investor.id = Commitment.investor_id
         GROUP BY Investor.id;
 -- 1,"Ioo Gryffindor fund","fund manager",Infrastructure,3492000000

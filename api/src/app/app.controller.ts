@@ -1,9 +1,9 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 
-import { DataAccessModule, DataAccessService } from 'data-access';
+import { DataAccessService } from 'data-access';
 
 @Controller('investors')
-export class InvestorController {
+export class InvestorsController {
   constructor(private readonly appService: DataAccessService) {}
 
   @Get()
@@ -22,8 +22,6 @@ export class InvestorsDataController {
   }
 }
 
-
-
 @Controller('commitments')
 export class CommitmentController {
   constructor(private readonly appService: DataAccessService) {}
@@ -31,5 +29,25 @@ export class CommitmentController {
   @Get()
   getCommitments() {
     return this.appService.getCommitments();
+  }
+}
+
+@Controller('assets')
+export class AssetsController {
+  constructor(private readonly appService: DataAccessService) {}
+
+  @Get()
+  getAssets() {
+    return this.appService.getAssets();
+  }
+}
+
+@Controller('investor')
+export class InvestorController {
+  constructor(private readonly appService: DataAccessService) {}
+
+  @Get(':id')
+  getInvestor(@Param() params: any) {
+    return this.appService.getInvestorCommitments(params.id);
   }
 }

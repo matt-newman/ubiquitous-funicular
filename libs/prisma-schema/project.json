@@ -24,6 +24,12 @@
         "cwd": "./"
       }
     },
+    "generate": {
+      "command": "prisma generate --sql",
+      "options": {
+        "cwd": "libs/prisma-schema"
+      }
+    },
     "types": {
       "command": "prisma generate --sql",
       "options": {

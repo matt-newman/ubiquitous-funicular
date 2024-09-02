@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common'
 import { PrismaClient, Commitment, Investor } from '@prisma/client'
-import { getInvestorsAndTotalCommitment,  } from '@prisma/client/sql';
+import { getInvestorsAndTotalCommitment, getInvestorCommitments, getAssets } from '@prisma/client/sql';
 
 const prisma = new PrismaClient()
 
@@ -16,6 +16,14 @@ export class DataAccessService {
 
   public getInvestorsAndTotalCommitments(): Promise<any[]> {
     return prisma.$queryRawTyped(getInvestorsAndTotalCommitment());
+  }
+
+  public getInvestorCommitments(investorId=1): Promise<any[]> {
+    return prisma.$queryRawTyped(getInvestorCommitments(investorId));
+  }
+
+  public getAssets(): Promise<any[]> {
+    return prisma.$queryRawTyped(getAssets());
   }
 }
 
