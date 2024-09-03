@@ -20,7 +20,6 @@ export function InvestorTable({ setInvestorId }: { setInvestorId: any }) {
               <th>name</th>
               <th>type</th>
               <th>date added</th>
-              <th>asset class</th>
               <th>country</th>
               <th>Total Commitment</th>
             </tr>
@@ -33,7 +32,6 @@ export function InvestorTable({ setInvestorId }: { setInvestorId: any }) {
                   <td>{row.investor_name}</td>
                   <td>{row.investor_type}</td>
                   <td>{row.date_added}</td>
-                  <td>{row.asset_class}</td>
                   <td>{row.investor_country}</td>
                   <td>{displayMoneyAmount(row.total_amount)}</td>
                 </tr>

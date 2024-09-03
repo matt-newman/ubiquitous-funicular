@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { displayMoneyAmount, useFetch } from "./utils";
+import { CommitmentTotals } from "./commitment-totals";
 
 const API_ROOT = 'http://localhost:3000/api/';
 const API_PATH = 'investor';
@@ -15,7 +16,11 @@ export function InvestorCommitments({ investorID = 1 }: { investorID: number }) 
     <>
       {data && (
         <>
-          <h2>Investor Commitments</h2><table>
+          <h2>Investor Commitments</h2>
+
+          <CommitmentTotals data={data} />
+
+          <table>
             <thead>
               <tr>
                 <th>id</th>
