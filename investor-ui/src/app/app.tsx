@@ -12,7 +12,7 @@ export function App() {
   return (
     <div>
       <Investors setInvestorId={setInvestor} />
-      <Commitments investorID={investor} />
+      <Commitments investorID={investor} assetType='' />
     </div>
   );
 }

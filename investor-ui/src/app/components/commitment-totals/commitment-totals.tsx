@@ -3,8 +3,7 @@ import { displayMoneyAmount, useFetch } from "../../utils";
 
 import './commitment-totals.css'
 
-export function CommitmentTotals({ data, assetType }: { data: any, assetType: string }) {
-
+export function CommitmentTotals({ data, setAssetType='' }: { data: any, setAssetType?: any }) {
     // slight duplication of effort, as there's also a query that does this, but now we have the data here already
     const output = data.reduce((prev: any, curr: any) => {
         if (!prev[curr.asset_class]) {
@@ -20,9 +19,9 @@ export function CommitmentTotals({ data, assetType }: { data: any, assetType: st
         <>
             {data && (
                 <div className="totals">
-                    {Object.keys(output).map(asset => {
+                    {Object.keys(output).map((asset, index) => {
                         return (
-                            <div className="totals--asset">
+                            <div key={index} className="totals--asset" onClick={()=>{ setAssetType(asset) }}>
                                 <div className="totals--asset-name">{asset}</div>
                                 <div className="totals--asset-amount">£{displayMoneyAmount(output[asset])}</div>
                             </div>
