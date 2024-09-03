@@ -33,12 +33,6 @@
         "previewTargetName": "preview",
         "serveStaticTargetName": "serve-static"
       }
-    },
-    {
-      "plugin": "@nx/playwright/plugin",
-      "options": {
-        "targetName": "e2e"
-      }
     }
   ],
   "targetDefaults": {
@@ -47,12 +41,6 @@
     }
   },
   "generators": {
-    "@nx/web:application": {
-      "style": "css",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "playwright"
-    },
     "@nx/react": {
       "application": {
         "babel": true,
