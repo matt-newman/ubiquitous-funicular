@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import styles from './app.module.css';
+import './app.module.css';
 
 import { InvestorTable } from './investor-table';
 import { InvestorCommitments } from './investor-commitments'

@@ -45,11 +45,11 @@ export function useFetch(url: string): any {
 };
 
 export function displayMoneyAmount(amount: number) {
-    let options = {
+    const options = {
         notation: 'compact',
     } as Intl.NumberFormatOptions;
 
-    let formatter = new Intl.NumberFormat("en-GB", options);
+    const formatter = new Intl.NumberFormat("en-GB", options);
 
     return formatter.format(amount);
 }
