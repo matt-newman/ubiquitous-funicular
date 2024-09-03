@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { displayMoneyAmount, useFetch } from "./utils";
-import { CommitmentTotals } from "./commitment-totals";
+import { displayMoneyAmount, useFetch } from "../../utils";
+import { CommitmentTotals } from "../commitment-totals/commitment-totals";
 
 const API_ROOT = 'http://localhost:3000/api/';
 const API_PATH = 'investor';
 const apiUrl = `${API_ROOT}${API_PATH}`;
 
-export function InvestorCommitments({ investorID = 1 }: { investorID: number }) {
+export function Commitments({ investorID = 1 }: { investorID: number }) {
 
   // TODO: load data from API, maybe via SWR?
   const { data, error } = useFetch(`${apiUrl}/${investorID}`);

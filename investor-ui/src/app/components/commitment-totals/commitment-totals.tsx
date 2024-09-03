@@ -1,16 +1,12 @@
 import React from "react";
-import { displayMoneyAmount, useFetch } from "./utils";
+import { displayMoneyAmount, useFetch } from "../../utils";
+
+import './commitment-totals.css'
 
 export function CommitmentTotals({ data, assetType }: { data: any, assetType: string }) {
 
     // slight duplication of effort, as there's also a query that does this, but now we have the data here already
     const output = data.reduce((prev: any, curr: any) => {
-        // -- "Hedge Funds",2102000000
-        // -- Infrastructure,2020000000
-        // -- "Natural Resources",2506000000
-        // -- "Private Debt",2431000000
-        // -- "Private Equity",2551000000
-        // -- "Real Estate",2325000000
         if (!prev[curr.asset_class]) {
             prev[curr.asset_class] = 0;
         }
@@ -28,7 +24,7 @@ export function CommitmentTotals({ data, assetType }: { data: any, assetType: st
                         return (
                             <div className="totals--asset">
                                 <div className="totals--asset-name">{asset}</div>
-                                <div className="totals--asset-amount">{displayMoneyAmount(output[asset])}</div>
+                                <div className="totals--asset-amount">£{displayMoneyAmount(output[asset])}</div>
                             </div>
                         )
                     })}

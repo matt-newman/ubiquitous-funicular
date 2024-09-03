@@ -1,11 +1,11 @@
 import React from "react";
-import { displayMoneyAmount, useFetch } from "./utils";
+import { displayMoneyAmount, useFetch } from "../../utils";
 
 const API_ROOT = 'http://localhost:3000/api/';
 const API_PATH = 'investors-data';
 const apiUrl = `${API_ROOT}${API_PATH}`;
 
-export function InvestorTable({ setInvestorId }: { setInvestorId: any }) {
+export function Investors({ setInvestorId }: { setInvestorId: any }) {
 
   // TODO: load data from API, maybe via SWR?
   const { data, error } = useFetch(`${apiUrl}`);

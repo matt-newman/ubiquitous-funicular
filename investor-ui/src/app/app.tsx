@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 
 import './app.module.css';
 
-import { InvestorTable } from './investor-table';
-import { InvestorCommitments } from './investor-commitments'
+import { Investors } from './components/investors/investors';
+import { Commitments } from './components/commitments/commitments'
 
 export function App() {
 
@@ -11,8 +11,8 @@ export function App() {
 
   return (
     <div>
-      <InvestorTable setInvestorId={setInvestor} />
-      <InvestorCommitments investorID={investor} />
+      <Investors setInvestorId={setInvestor} />
+      <Commitments investorID={investor} />
     </div>
   );
 }
