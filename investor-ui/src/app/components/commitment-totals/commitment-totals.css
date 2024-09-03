@@ -3,7 +3,7 @@
     width: fit-content;
 }
 
-.totals--asset:first-child {
+.totals--asset.active {
     background-color: #eee;
 }
 

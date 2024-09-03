@@ -14,17 +14,20 @@ export function Commitments({ investorID = 1 }: { investorID: number }) {
   const [assetType, setAssetType] = useState('');
 
   const filteredAssets = data?.filter(asset => {
+    if ( assetType === 'All' ) {
+      return true;
+    }
     return assetType ? asset.asset_class === assetType : true;
   })
 
   return (
     // eslint-disable-next-line react/jsx-no-useless-fragment
-    <>
+    <div className="commitments">
       {data && (
         <>
           <h2>Investor Commitments</h2>
 
-          <CommitmentTotals data={data} setAssetType={setAssetType} />
+          <CommitmentTotals data={data} setAssetType={setAssetType} activeAsset={assetType} />
           
           {filteredAssets.length < 1 && (
             <>No results!</>
@@ -57,6 +60,6 @@ export function Commitments({ investorID = 1 }: { investorID: number }) {
           )}
         </>
       )}
-    </>
+    </div>
   );
 }
