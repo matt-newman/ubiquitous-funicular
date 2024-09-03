@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { displayMoneyAmount, useFetch } from "./utils";
 
 const API_ROOT = 'http://localhost:3000/api/';
 const API_PATH = 'investor';
 const apiUrl = `${API_ROOT}${API_PATH}`;
 
-export function InvestorCommitments({ investor=1 }: { investor: number }) {
+export function InvestorCommitments({ investorID=1 }: { investorID: number }) {
 
   // TODO: load data from API, maybe via SWR?
-  const { data, error } = useFetch(`${apiUrl}/${investor}`);
+  const { data, error } = useFetch(`${apiUrl}/${investorID}`);
 
   return (
     <>
@@ -23,8 +23,9 @@ export function InvestorCommitments({ investor=1 }: { investor: number }) {
           </tr>
         </thead>
         <tbody>
-            {data?.map(row => {
-              const id = `commitmentId-${row.id}`
+            {data?.map((row:any) => {
+              const id = `commitmentId-${row.id}`;
+
               return (
                 <tr key={id}>
                   <td>{row.id}</td>

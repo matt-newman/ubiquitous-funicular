@@ -5,7 +5,7 @@ const API_ROOT = 'http://localhost:3000/api/';
 const API_PATH = 'investors-data';
 const apiUrl = `${API_ROOT}${API_PATH}`;
 
-export function InvestorTable({ title }: { title?: string }) {
+export function InvestorTable({ setInvestorId }: { setInvestorId: any }) {
 
   // TODO: load data from API, maybe via SWR?
   const { data, error } = useFetch(`${apiUrl}`);
@@ -28,7 +28,7 @@ export function InvestorTable({ title }: { title?: string }) {
         <tbody>
             {data?.map(row => {
               return (
-                <tr key={row.id}>
+                <tr key={row.id} onClick={() => setInvestorId(row.id)}>
                   <td>{row.id}</td>
                   <td>{row.investor_name}</td>
                   <td>{row.investor_type}</td>
